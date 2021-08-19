@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 from django.contrib import messages
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5ae81r6b5m4sk^p=+rj+83je*cq)$#wwd0)mr_864rz18&)4jj'
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms', #third-party for forms
 ]
 
 MIDDLEWARE = [
@@ -129,3 +131,7 @@ MESSAGE_TAGS = {
         messages.SUCCESS: 'alert-success',
         messages.ERROR: 'alert-danger',
 }
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
