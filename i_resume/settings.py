@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import django_heroku
 
 from django.contrib import messages
 from dotenv import load_dotenv
@@ -133,5 +134,4 @@ MESSAGE_TAGS = {
 }
 
 # Configure Django App for Heroku.
-import django_heroku
 django_heroku.settings(locals())
