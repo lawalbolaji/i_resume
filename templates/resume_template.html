@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Abdulrasheed Lawal - Resume</title>
+
+<meta name="viewport" content="width=device-width"/>
+<meta charset="UTF-8"> 
+
+<!-- Customized CSS -->
+<link type="text/css" rel="stylesheet" href="{% static 'resume.css' %}">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Animated Scroll -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+<div>
+	<!-- Header -->
+	<div class="container-fluid">
+		<div class="text-center mt-5">
+			<img class="rounded" src="{% static 'headshot.png' %}" alt="headshot">
+		</div>
+		<div class="px-4 pt-2 pb-3 my-2 text-center">
+			<h2 class="display-5 fw-bold mb-0">Abdulrasheed Lawal</h2>
+			<h4 class="mt-0">Product Associate</h4>
+			<p class="mb-5">w: <a target="_blank" href="https://www.linkedin.com/in/abdulrasheed-lawal-16a2239a/">abdulrasheed-lawal.com</a> | e: <a target="_blank" href="mailto:lawalabdulrasheedbolaji@gmail.com">lawalabdulrasheedbolaji@gmail.com</a> | m: +2348133367208</p>
+			<div class="col-lg-6 mx-auto">
+			  <p class="lead mb-2 pb-2 border-bottom" id="into-par" style="font-size: 100%;">Abdulrasheed is an energetic and versatile professional with excellent verbal and written communication skills. An ambitious, smart worker and a fast learner with a proven ability to thrive in creative and competitive environments. He is a creative problem solver with outstanding presentation and analytical talents.</p>
+			</div>
+		</div>
+	
+		<div class="text-center my-5">
+			<a href="#main_stuff" role="button" class="btn btn-outline-primary">Learn More</a>
+		</div>
+	</div>
+
+	<!-- Main Content -->
+	<a id="main_stuff">
+		<div></div>
+	</a>
+
+	</div>
+	<main class="container" data-aos="fade-up" data-aos-duration="3000">
+		<div class="row g-4">
+		  <div class="col-md-8">
+			<!-- Work Experience -->
+			<h4 class="pb-2 mb-2 border-bottom">Work Experience</h4>
+			<!-- WE-1 -->
+			<div class="job_details">
+				<div class="row my-0 py-0">
+					<h6 class="col-md-9 my-0">Product Associate @bonango.io</h2><p class="col-md-3 small text-right my-0">August 2021 - Date</p>
+				</div>
+				<p class="px-2 mt-0">Managed the design and development of lowcode and nocode microproducts for bonango.io</p>
+			</div>
+			<!-- WE-2 -->
+			<div class="job_details">
+				<div class="row my-0 py-0">
+					<h6 class="col-md-9 my-0">Proposal engineer @ariosh</h2><p class="col-md-3 small text-right my-0">February 2019 - July 2021</p>
+				</div>
+				<p class="px-2 mt-0">Designed and developed detailed technical proposals for engineering, procurement and construction projects.</p>
+			</div>
+
+			<!-- Skills -->
+			<h4 class="pb-2 mb-2 border-bottom">Skills</h3>
+			<div class="px-0 mx-0">
+				<ul class="keySkills px-2 mx-0">
+					<li>Creative Problem Solving</li>
+					<li>Product Management</li>
+					<li>SOPs and Automations</li>
+					<li>Data Analytics</li>
+					<li>Python (Django, Scikitlearn)</li>
+					<li>Postgressql</li>
+				</ul>
+			</div>
+
+			<!-- Projects -->
+			<h4 class="pb-2 mb-2 border-bottom">Projects</h3>
+			<div class="px-0 mx-0">
+				<ul class="keySkills px-2 mx-0">
+					<li><a target="_blank" href="https://github.com/lawalbolaji/Predicting-with-Trained-Neural-Network-Octave">Predicting with Trained Neural Network (Octave)</a></li>
+					<li><a target="_blank" href="https://github.com/lawalbolaji/Training-Neural-Network-Octave">Training a Neural Network (Octave)</a></li>
+					<li><a target="_blank" href="https://github.com/lawalbolaji/django-blog">Blog Engine (Another "Medium"? ...or not)</a></li>
+					<li><a target="_blank" href="https://github.com/lawalbolaji/atm-python">ATM Project (Python)</a></li>
+					<li><a target="_blank" href="https://github.com/lawalbolaji/async-lazy-loading-react">Lazy loading on the frontend (React)</a></li>
+					<li><a target="_blank" href="https://github.com/lawalbolaji/Predicting-Gender-with-Sound">Predicting Gender based on sound of Name</a></li>
+				</ul>
+				<p class="px-2">Check out my entire collection <a target="_blank" href="https://github.com/lawalbolaji">here</a></p>
+			</div>
+			
+			<!-- Education -->
+			<h4 class="pb-2 mb-2 border-bottom">Education</h3>
+			<div class="row my-0 py-0">
+				<h6 class="col-md-9 my-0">University of Ilorin</h2><p class="col-md-3 small text-right my-0">2018</p>
+				<p class="px-4 mt-0">B.Eng (Hons) Electrical and Elecctronics Engineering</p>
+			</div>
+
+		  </div>
+	  
+		  <!-- Contact Form -->
+		  <div class="col-md-4">
+			  <h4>Let's talk...</h4>
+			<div class="position-sticky" style="top: 2rem;">
+				{% block content %}
+				{% endblock content %}
+
+				<div class="my-2" id="notification">
+					{% include 'notification.html' %}					
+				</div>
+
+		  </div>
+
+		</div>
+	</main>
+	<!-- Bottom Navigation Menu -->
+	<div class="container">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<p class="col-md-4 mb-0 text-muted">&copy; 2021 Rasheed</p>
+		
+			<div class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto">
+			<img src="{% static 'hng.png' %}" alt="hng" class="px-2">
+			<img src="{% static 'I4G.png' %}" alt="hng" class="px-2">
+			<img src="{% static 'zuri.png' %}" alt="hng" class="px-2">
+			</div>
+		
+			<ul class="nav col-md-4 justify-content-end">
+			<li class="nav-item"><a href="https://hng.tech/" class="nav-link px-2 text-muted">HNG</a></li>
+			<li class="nav-item"><a href="https://ingressive.org/" class="nav-link px-2 text-muted">i4G</a></li>
+			<li class="nav-item"><a href="https://training.zuri.team/" class="nav-link px-2 text-muted">Zuri</a></li>
+			</ul>
+		</footer>
+	</div>
+</div>
+
+<!-- Bootstrap Script -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Animated Scroll -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
